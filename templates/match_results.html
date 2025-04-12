@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Matched Investors</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <div class="max-w-5xl mx-auto py-12 px-6">
+    <h1 class="text-3xl font-bold text-blue-700 mb-4">🎯 Matched Investors</h1>
+    <p class="mb-6 text-lg">We found <span class="font-bold">{{ matches|length }}</span> investor{{ matches|length != 1 and 's' or '' }} that match your profile.</p>
+
+    <form action="/select-investors" method="POST">
+      <div class="grid gap-6">
+        {% for match in matches %}
+          <div class="bg-white shadow-lg rounded-xl p-6 flex items-start space-x-4">
+            <input type="checkbox" name="selected_investors" value="{{ match.name }}" class="mt-1">
+            <div>
+              <h2 class="text-xl font-semibold text-blue-600">{{ match.name }}</h2>
+              <p class="text-sm text-gray-700 mb-2">💯 <strong>Match Score:</strong> {{ match.matching_score }}</p>
+              <p class="text-gray-800">{{ match.reason }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="mt-8 text-center">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold">
+          ✅ Continue with Selected
+        </button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

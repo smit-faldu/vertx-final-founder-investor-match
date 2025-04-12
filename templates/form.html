@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Founder Profile Submission</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center px-4">
+  <div class="w-full max-w-3xl bg-gray-800 rounded-2xl p-8 shadow-xl">
+    <h1 class="text-4xl font-extrabold mb-8 text-center text-blue-300">Founder Profile Form</h1>
+
+    <form method="POST" class="space-y-5">
+
+      <!-- One input per line -->
+      <div>
+        <label class="block mb-1 font-semibold">Founder Name</label>
+        <input name="founder_name" required class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Company Name</label>
+        <input name="company_name" required class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">What are you building?</label>
+        <textarea name="what_building" required class="w-full p-3 rounded-xl bg-gray-100 text-gray-900 h-24 resize-none"></textarea>
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Do you have co-builders?</label>
+        <input name="co_builders" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Contact Email</label>
+        <input name="contact" type="email" required class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Product Link</label>
+        <input name="product_link" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Professional Presence</label>
+        <input name="presence" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900" placeholder="LinkedIn, website, etc.">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Industry</label>
+        <input name="industry" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Company Description</label>
+        <textarea name="description" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900 h-24 resize-none"></textarea>
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Sectors (comma-separated)</label>
+        <input name="sectors" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Current Traction</label>
+        <textarea name="traction" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900 h-24 resize-none"></textarea>
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Required Funding</label>
+        <input name="required_funding" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Previous Funding</label>
+        <input name="previous_funding" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Target Countries (comma-separated)</label>
+        <input name="target_countries" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Product Stage</label>
+        <input name="product_stage" class="w-full p-3 rounded-xl bg-gray-100 text-gray-900">
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center pt-4">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-800 px-8 py-3 rounded-full text-lg font-semibold shadow-md">
+          🚀 Submit Profile
+        </button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>
